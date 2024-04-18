@@ -9,21 +9,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Webpage</title>
 
+    <!--Defining CSS with HEAD STYLING (Not best practice)-->
+    <style>
+        p{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: italic;
+            color:lightseagreen;
+            text-align: center;
+        }
+    </style>
+
+    <!--Defining CSS with an EXTERNAL STYLESHEET (best practice)-->
+    <!--All we need to do is link the CSS with the <link> tag-->
+    <link rel="stylesheet" href="HelloHTMLCSS.css">
+
 </head>
 
 <!-- The body contains all of the actual content of our webpage -->
 <body>
     
     <!-- h1-h6 are "headers". h1 is the biggest one. -->
-    <h1 title="greeting">Hello HTML! I am a front end developer now.</h1>
+    <!--Defining CSS with INLINE STYLING (not best practice, but kind of common)-->
+    <h1 style="background-color: burlywood; border: solid 5px brown;" title="greeting">Hello HTML! I am a front end developer now.</h1>
 
     <p>I just built a webpage!</p> <p>Despite being on the same line, I render on a new line on the page. I'M A BLOCK ELEMENT</p>
 
     <br> <!-- This creates an empty blank line. A line BReak -->
 
-    <span>I'm a span!</span> <span>We are INLINE ELEMENTS</span>
+    <span class="mySpan">I'm a span!</span> <span class="mySpan">We are INLINE ELEMENTS</span>
 
-    <!--TODO: show divs-->
+    <!--Divs are your general "division" tag. We usually nest elements in these-->
+    <div>
+        <p>I am a paragraph within a Div!</p>
+        <span>I am a span in a div</span>
+    </div>
+
+    <!--------------------------------------------------------------(Lists)-->
+
+    <h2>Our Favorite Animal</h2>
+
+    <!--Another example of INLINE STYLING (not best practice but sometimes used)-->
+    <ol style="border: purple dashed 7px">
+        <li>Dog</li>
+        <li>Cat</li>
+        <li>Bear</li>
+        <li>Monkey</li>
+        <li>Black Jaguar</li>
+    </ol>
+
+    <h3>Honorable Mentions</h3>
+
+    <ul id="unorderedList">
+        <li>Dragon</li>
+        <li>Mantis Shrimp</li>
+        <li>Velociraptor</li>
+        <li>Bird</li>
+        <ol>
+            <li>I'm an ol nested in a ul</li>
+            <li>Cardinal</li>
+            <li>Bluejays</li>
+        </ol>
+    </ul>
+
+    <!-----------------------------------------------------------(Tables)-->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Favorite Movie</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ben</td>
+                <td>Everything Everywhere All At Once</td>
+            </tr>
+            <tr>
+                <td>Jeremy</td>
+                <td>Interstellar</td>
+            </tr>
+            <tr>
+                <td>Neil</td>
+                <td>Saddles</td>
+            </tr>
+            <tr>
+                <td>William</td>
+                <td>Arrival</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br><br>
+
+    <p>Enter your username:</p>
+    <input type="text"> <!--Basic text input-->
+
+    <p>Enter your password:</p>
+    <input type="password"> <!--Password obscures text-->
+
+    <!--Radio Buttons only let you select one of the options-->
+    <h3>Choose an Option:</h3>
+
+    <input type="radio" name="radioGroup1" id="radio1">
+    <label for="radio1">Option A</label>
+
+    <input type="radio" name="radioGroup1" id="radio2">
+    <label for="radio2">Option B</label>
+
+    <!--Checkboxes allow you to select multiple options-->
+    <h3>How do you feel?</h3>
+
+    <input type="checkbox" name="checkGroup1" id="check1">
+    <label for="check1">Like Eating a Pizza</label>
+
+    <input type="checkbox" name="checkGroup1" id="check2">
+    <label for="check2">Like doing anyhting other than this</label>
+
+    <input type="checkbox" name="checkGroup1" id="check3">
+    <label for="check3">Like learning as much front end as possible</label>
+
+    <input type="checkbox" name="checkGroup1" id="check4">
+    <label for="check4">D E S P A I R </label>
+
+    <br><br><br>
+
+    <!--Select lets us do dropdowns - we could add multiple="true" if we want-->
+    <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+
+    <button>Hi I'm a button! Click me, I won't do anything</button>
+
+    <br><br><br>
+
+    <!--Some HTML5 elements---------------->
+
+    <!--Slick way to store a summary + greater details-->
+    <details>
+        <summary>Hi Click Me For More Details</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores architecto sed voluptatibus asperiores recusandae aperiam assumenda sequi beatae aut! Vero doloribus natus labore, cumque autem provident dolorum? Ipsa pariatur consectetur, aperiam sint ipsum impedit similique id recusandae eius nihil earum adipisci, debitis velit officiis! Alias necessitatibus dolorem ipsum dolore, ducimus quibusdam dolores beatae amet corrupti harum facilis tenetur magnam. Laboriosam sed autem tempore recusandae rem.</p>
+    </details>
+
+    <article>
+        <h2>This just in it's raining meatballs</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur doloribus, maxime expedita libero placeat sit, minima ipsum tempora ullam ipsa labore id voluptatum vitae enim nihil, asperiores deserunt molestias magni obcaecati soluta aspernatur. Saepe provident quaerat dolorum sunt itaque cupiditate voluptate molestiae nulla aperiam. Vitae ipsam inventore ratione blanditiis fugit?</p>
+    </article>
+
 
 </body>
 

@@ -1,0 +1,11 @@
+/*Every element with id=unorderedList will get this styling*/
+#unorderedList{
+    color:red;
+    margin: 50px; /*This element will be 50 more pixels away from its neighbors*/
+}
+
+/*Every element with class=mySpan will get this styling*/
+.mySpan{
+    border: double;
+    padding: 15px; /*Now there is 20 more pixels of space between content and border*/ 
+}
