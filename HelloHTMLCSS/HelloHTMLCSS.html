@@ -23,6 +23,9 @@
     <!--All we need to do is link the CSS with the <link> tag-->
     <link rel="stylesheet" href="HelloHTMLCSS.css">
 
+    <!--This is all we need to use BOOTSTRAP for styling-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
+
 </head>
 
 <!-- The body contains all of the actual content of our webpage -->
@@ -73,7 +76,7 @@
 
     <!-----------------------------------------------------------(Tables)-->
 
-    <table>
+    <table class="table table-dark table-striped">
         <thead>
             <tr>
                 <th>Name</th>
@@ -111,11 +114,19 @@
     <!--Radio Buttons only let you select one of the options-->
     <h3>Choose an Option:</h3>
 
-    <input type="radio" name="radioGroup1" id="radio1">
-    <label for="radio1">Option A</label>
 
-    <input type="radio" name="radioGroup1" id="radio2">
-    <label for="radio2">Option B</label>
+    <div id="radioContainer">
+        <div>
+            <input type="radio" name="radioGroup1" id="radio1">
+            <label for="radio1">Option A</label>
+        </div>
+
+        <div>
+            <input type="radio" name="radioGroup1" id="radio2">
+            <label for="radio2">Option B</label>
+        </div>
+    </div>   
+
 
     <!--Checkboxes allow you to select multiple options-->
     <h3>How do you feel?</h3>
