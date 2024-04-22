@@ -23,6 +23,7 @@ let arrow = (var1, var2) => {
     console.log(var1 == var2)
 }
 
+
 //Let's use this arrow function to compare the values (NOT TYPES) of the two variables
 arrow("", false)
 arrow(0, false)
