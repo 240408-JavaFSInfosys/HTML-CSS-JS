@@ -143,6 +143,7 @@ scopeTest()
 /* The main difference between block/function scope is...
 
     -vars and NOT visible outside the function they were declared in
-    -BUT they ARE visible outside of any non-function blocks they were declared
+    -BUT vars ARE visible outside of any non-function blocks they were declared
 
+    remember, blocks are any set of {curly braces} that AREN'T a function (like an if statement)
 */
