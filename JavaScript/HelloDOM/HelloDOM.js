@@ -38,7 +38,7 @@ function b1Function(){
 
 //there is a shorter way to add event listeners, which is what I usually do----
 
-//let's get button b2 and paragraph p1. We want to give p1 some content
+//let's select button b2 and paragraph p1. We want to give p1 some content
 let b2 = document.getElementById("b2")
 let p1 = document.getElementById("p1")
 
@@ -46,4 +46,21 @@ b2.onclick = b2Function
 
 function b2Function(){
     p1.textContent = "NOW I HAVE CONTENT!"
+}
+
+//h2 logic-------------
+
+//DOM SELECT the h2
+let header = document.getElementById("header")
+
+//attach mouseover and mouseleave listeners to the header
+header.onmouseover = hoverFunction
+header.onmouseleave = releaseFunction
+
+function hoverFunction(){
+    header.textContent = "Don't touch me!!!"
+}
+
+function releaseFunction(){
+    header.textContent = "Scroll over me again!"
 }
