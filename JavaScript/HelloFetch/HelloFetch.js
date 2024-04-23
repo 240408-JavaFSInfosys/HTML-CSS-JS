@@ -26,7 +26,7 @@ async function fetchData(){
     //This data will be sent to the renderHTML function to appear on the page
     .catch((error) => document.getElementById("header").innerHTML = "It Got Away...")
     .finally(() => 
-        setTimeout(() => document.getElementById("header").innerHTML = "Find Another Pokemon:", 2000)
+        setTimeout(() => document.getElementById("header").innerHTML = "Find Another Pokemon:", 3000)
     ) //setTimeout lets us define some functionality to run after some specified amount of milliseconds
 
     /*
