@@ -40,6 +40,9 @@ async function fetchData(){
 
 //This function will take in the Pokemon data and render it on the page
 function renderHTML(data){
+
+    getUsers()
+
     console.log(data) //just to see the full pokemon object in console
 
     //populate the table with the appropriate pokemon data
@@ -50,3 +53,28 @@ function renderHTML(data){
     //pokepic is an <img>, so we need to set the src attribute
     pokepic.setAttribute("src", data.sprites.front_default)
 }
+
+
+//--------------Hypotetical POST request (bit more involved than a GET)
+
+//in any non-GET requests, we need to include this {configuration object}
+await fetch(url, {
+    method: "POST", //now, we're sending a POST request 
+    body: JSON.stringify(newPokemonObject) //turning some Pokemon object into JSON to send to PokeAPI
+})
+.then("stuff")
+.catch("other stuff")
+.finally("even more stuff that will always run")
+
+
+
+//---------------GET request to PPPDemo (get all users and print in an alert)
+
+async function getUsers(){
+
+    await fetch("http://localhost:8080/users")
+    .then((response) => response.json())
+    .then((data) => alert(data))
+
+}
+
